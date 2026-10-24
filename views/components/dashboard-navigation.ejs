@@ -1,0 +1,29 @@
+<div class="account-nav flex-grow-1">
+    <h4 class="account-nav__title">Navigation</h4>
+    <ul>
+        <li class="account-nav__item <%= currentPath === '/dashboard' ? 'account-nav__item--active' : '' %>">
+            <a href="/dashboard">Dashboard</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/edit-profile' ? 'account-nav__item--active' : '' %>">
+            <a href="/edit-profile">Edit Profile</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/orders-history' ? 'account-nav__item--active' : '' %>">
+            <a href="/orders-history">Order History</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/order-details' ? 'account-nav__item--active' : '' %>">
+            <a href="/order-details">Order Details</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/addresses' ? 'account-nav__item--active' : '' %>">
+            <a href="/addresses">Addresses</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/edit-address' ? 'account-nav__item--active' : '' %>">
+            <a href="/edit-address">Edit Address</a>
+        </li>
+        <li class="account-nav__item <%= currentPath === '/password' ? 'account-nav__item--active' : '' %>">
+            <a href="/password">Password</a>
+        </li>
+        <li class="account-nav__item">
+            <a href="/login">Logout</a>
+        </li>
+    </ul>
+</div>

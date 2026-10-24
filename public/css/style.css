@@ -1260,6 +1260,10 @@ screen and (-ms-high-contrast:active) {
     margin-left: -1.5rem
 }
 
+.iti {
+    width: 100%;
+}
+
 @media (max-width:767px) {
     .form-group {
         margin-bottom: 1.125rem

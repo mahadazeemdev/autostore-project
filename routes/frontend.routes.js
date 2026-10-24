@@ -6,6 +6,12 @@ import * as page from '../controllers/page.controller.js';
 import * as cart from '../controllers/cart.controller.js';
 const router = express.Router();
 
+// Passes route name to the page
+router.use((req, res, next) => {
+    res.locals.currentPath = req.path;
+    next();
+});
+
 // Shop Routes
 router.get('/', shop.home_page);
 router.get('/shop', shop.shop_list);
@@ -13,15 +19,18 @@ router.get('/product', shop.product_page);
 
 // User Routes
 router.get('/dashboard', user.dashboard);
-router.get('/adresses', user.addresses);
+router.get('/addresses', user.addresses);
 router.get('/edit-address', user.edit_address);
+router.get('/register', user.register_page);
+router.post('/register', user.register)
 router.get('/login', user.login);
 router.get('/order-details', user.order_details);
-router.get('/orders', user.orders);
+router.get('/orders-history', user.orders_history);
 router.get('/password', user.password);
-router.get('/profile', user.profile);
+router.get('/edit-profile', user.edit_profile);
 router.get('/track-order', user.track_order);
 router.get('/order-success', user.order_success);
+router.get('/logout', user.logout);
 
 // Blog Routes
 router.get('/blog', blog.blog_page);
